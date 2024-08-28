@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshoot Booking Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Photoshoot Booking Form</h1>
+    <form action="send-booking.php" method="POST" enctype="multipart/form-data">
+        <!-- Office Image Upload Section -->
+        <div class="image-upload-section">
+            <h2>Your Office Image</h2>
+            <input type="file" name="office_image" accept="image/*"><br><br>
+            <img src="your-office-image-placeholder.jpg" alt="Office Image">
+        </div>
+
+        <!-- Client Image Upload Section -->
+        <div class="image-upload-section">
+            <h2>Upload Your Image</h2>
+            <input type="file" name="client_image" accept="image/*"><br><br>
+            <img src="your-client-image-placeholder.jpg" alt="Client Image">
+        </div>
+
+        <!-- Client Information -->
+        <h2>Client Information</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br><label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br><br>
+
+        <h2>Photoshoot Details</h2>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="type">Type of Photoshoot:</label><br>
+        <select id="type" name="type" required>
+            <option value="Portrait">Portrait</option>
+            <option value="Family">Family</option>
+            <option value="Product">Product</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Event">Event</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="location">Location:</label><br>
+        <select id="location" name="location" required>
+            <option value="Studio">Studio</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Client's Home">Client's Home</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="participants">Number of Participants:</label>
+        <input type="number" id="participants" name="participants"><br><br>
+
+        <label for="duration">Duration:</label><br>
+        <select id="duration" name="duration" required>
+            <option value="1 Hour">1 Hour</option>
+            <option value="2 Hours">2 Hours</option>
+            <option value="Half Day">Half Day</option>
+            <option value="Full Day">Full Day</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <h2>Photoshoot Preferences</h2>
+        <label for="wardrobe">Wardrobe Changes:</label><br>
+        <input type="radio" id="wardrobe_yes" name="wardrobe" value="Yes"> Yes
+        <input type="radio" id="wardrobe_no" name="wardrobe" value="No"> No<br><br>
+
+        <label for="props">Props:</label><br>
+        <input type="radio" id="props_yes" name="props" value="Yes"> Yes
+        <input type="radio" id="props_no" name="props" value="No"> No<br><br>
+
+        <label for="specific_shots">Specific Shots/Poses Required:</label><br>
+        <textarea id="specific_shots" name="specific_shots"></textarea><br><br>
+
+        <label for="themes">Themes/Concepts:</label><br>
+        <textarea id="themes" name="themes"></textarea><br><br>
+
+        <label for="editing">Editing Preferences:</label><br>
+        <input type="radio" id="standard_editing" name="editing" value="Standard Editing"> Standard Editing
+        <input type="radio" id="advanced_editing" name="editing" value="Advanced Editing"> Advanced Editing
+        <input type="radio" id="black_white" name="editing" value="Black & White"> Black & White<br><br>
+
+        <h2>Budget and Payment</h2>
+        <label for="budget">Budget Range:</label>
+        <input type="text" id="budget" name="budget"><br><br>
+
+        <label for="payment_method">Preferred Payment Method:</label><br>
+        <input type="radio" id="credit_card" name="payment_method" value="Credit Card"> Credit Card
+        <input type="radio" id="bank_transfer" name="payment_method" value="Bank Transfer"> Bank Transfer
+        <input type="radio" id="cash" name="payment_method" value="Cash"> Cash<br><br>
+
+        <label for="deposit">Deposit Required:</label><br>
+        <input type="radio" id="deposit_yes" name="deposit" value="Yes"> Yes
+        <input type="radio" id="deposit_no" name="deposit" value="No"> No<br><br>
+
+        <label for="additional_info">Additional Information:</label><br>
+        <textarea id="additional_info" name="additional_info"></textarea><br><br>
+
+        <h2>Agreement</h2>
+        <label for="signature">Client Signature:</label>
+        <input type="text" id="signature" name="signature" required><br><br>
+
+        <input type="submit" value="Submit Booking">
+    </form>
+</body>
+</html>
+
+        
